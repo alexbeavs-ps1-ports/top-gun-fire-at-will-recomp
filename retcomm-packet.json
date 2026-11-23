@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "top-gun-fire-at-will-psx",
+  "name": "Top Gun - Fire at Will!",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "top-gun-fire-at-will-recomp",
+  "rom_identity": {
+    "crc32": [
+      "2780ceef"
+    ],
+    "md5": [
+      "d0ef88a6a9b749b8205233104b34ffce"
+    ],
+    "sha1": [
+      "24293dc9cf3675d2f7af2b06ecd778775d3bdbf6"
+    ],
+    "disc_serials": [
+      "SLUS-00032"
+    ],
+    "sizes": [
+      654770928
+    ],
+    "filenames": [
+      "Top Gun - Fire at Will! (USA).cue",
+      "Top Gun - Fire at Will! (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "c918fb6ed1e052967fb9a2a146765f9d017f9333da3ec0207fdd546a054332b3"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/top-gun-fire-at-will-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "top-gun-fire-at-will-*-windows-x64.zip",
+      "linux-x64": "top-gun-fire-at-will-*-linux-x64.zip",
+      "macos-arm64": "top-gun-fire-at-will-*-macos-arm64.zip",
+      "macos-x64": "top-gun-fire-at-will-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "top_gun_fire_at_will.exe",
+    "linux": "top_gun_fire_at_will",
+    "macos": "top_gun_fire_at_will"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/top-gun-fire-at-will-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
